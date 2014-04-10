@@ -26,7 +26,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
-#include <GLUT/glut.h>
+#include <GL/glut.h>
 #include "shoebill.h"
 #include "core_api.h"
 

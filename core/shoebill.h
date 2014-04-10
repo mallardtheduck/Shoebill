@@ -31,9 +31,13 @@
 #include <stdint.h> 
 #include <sys/time.h>
 #include <pthread.h>
+#include <netinet/in.h>
+#include <math.h>
 //#include <histedit.h>
 
 #include "coff.h"
+
+#define pthread_yield_np pthread_yield
 
 // -- Global constants --
 

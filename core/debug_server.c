@@ -46,7 +46,7 @@ static int _start_debug_server(void)
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     
     memset(&addr, 0, sizeof(addr));
-    addr.sin_len = sizeof(struct sockaddr_in);
+    //addr.sin_len = sizeof(struct sockaddr_in);
     addr.sin_family = AF_INET;
     addr.sin_port = htons(SHOEBILL_DEBUG_PORT);
     addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
@@ -113,8 +113,9 @@ void *debug_cpu_thread (void *arg)
             
             cpu_step();
         }
-        else if (shoe.dbg.mode == DEBUG_MODE_STOPPED)
-            pthread_yield_np();
+        else if (shoe.dbg.mode == DEBUG_MODE_STOPPED) {
+            //pthread_yield_np();
+	}
         else if (shoe.dbg.mode == DEBUG_MODE_STEP) {
             cpu_step();
             shoe.dbg.mode = DEBUG_MODE_STOPPED;

@@ -24,7 +24,7 @@
  */
 
 #include <stdio.h>
-#include <machine/endian.h>
+#include <endian.h>
 #include <arpa/inet.h>
 #include <assert.h>
 #include <stdlib.h>
